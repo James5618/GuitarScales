@@ -215,6 +215,7 @@ executable bit does not survive the trip, so on the Mac run
 
 ```bash
 chmod +x "Musical Scales.app/Contents/MacOS/MusicalScales"
+xattr -cr "Musical Scales.app"
 codesign --force --deep --sign - "Musical Scales.app"
 ```
 
