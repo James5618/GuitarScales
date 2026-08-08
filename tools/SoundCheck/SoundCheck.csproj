@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SoundCheck</AssemblyName>
+    <RootNamespace>SoundCheck</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <!--
+    The synthesis is linked in as source rather than referenced as a project, so this
+    tool measures exactly the code the app ships without dragging in Avalonia.
+  -->
+  <ItemGroup>
+    <Compile Include="..\..\src\MusicalScales\Audio\GuitarSynth.cs" Link="GuitarSynth.cs" />
+    <Compile Include="..\..\src\MusicalScales\Audio\FmSynth.cs" Link="FmSynth.cs" />
+    <Compile Include="..\..\src\MusicalScales\Theory\Notes.cs" Link="Notes.cs" />
+    <Compile Include="..\..\src\MusicalScales\Theory\ChordShapes.cs" Link="ChordShapes.cs" />
+  </ItemGroup>
+
+</Project>
+
